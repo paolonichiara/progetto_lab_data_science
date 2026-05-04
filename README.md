@@ -53,18 +53,18 @@ Quando avviato, il sistema:
    - *Explainer*: Genera insight e scrive le conclusioni in base alle statistiche.
    - *Critic*: Verifica la coerenza tra testo generato e dati reali, identificando errori logici o numerici e garantendo che le conclusioni non violino le statistiche calcolate allo step 3.
 
-# Separazione logica: Python vs LLM
+### Separazione logica: Python vs LLM
 - Statistica → Python (deterministico, veloce, affidabile)
 - Linguaggio e interpretazione → LLM
 * Gli LLM non sono affidabili per calcoli numerici precisi → si evita delega critica al modello
-# Critic Agent
+### Critic Agent
 - per ridurre hallucinations e migliorare affidabilità output
 - Trade-off: tra maggiore latenza (due chiamate LLM) e migliore qualità finale
-# Modello utilizzato
+### Modello utilizzato
 **llama3.2:latest** (≈3B parametri, quantizzato - Llama 3.2 da 3 miliardi di parametri)
 - perchè compatibile con CPU (Mac Intel) e migliore qualità rispetto a modelli <1B
 - modello abbastanza leggero (circa 2.0 GB di RAM) da poter girare in modo fluido sulla CPU Intel senza causare colli di bottiglia o blocchi di sistema
-# Trade-off hardware vs performance
+### Trade-off hardware vs performance
 Vincoli: esecuzione locale su CPU
 - modello piccolo (3B)
 - delega calcolo a librerie ottimizzate (carico computazionale logico-matematico su algoritmi deterministici Python)
