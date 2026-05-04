@@ -1,0 +1,10 @@
+pandas  # dataset
+numpy # calcoli
+scipy # test statistici
+
+matplotlib # plotting
+seaborn # boxplot, countplot, heatmap
+plotly # grafici interattivi
+
+requests # chiamata API locale Ollama
+openpyxl # lettura file excel
