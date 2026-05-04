@@ -17,7 +17,7 @@ Capitolo 4 – Agents
 - pattern: Explainer → Critic (reflection)
 - separazione tra generazione e validazione 
 
-## Struttura del Progetto
+## Struttura
 EDA_assistant/
 ├── data/                  # Dataset di input (.csv, .xlsx)
 ├── outputs/               # Report generati e grafici salvati
