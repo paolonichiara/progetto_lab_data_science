@@ -18,7 +18,6 @@ Capitolo 4 – Agents
 - separazione tra generazione e validazione 
 
 ## Struttura del Progetto
-
 EDA_assistant/
 ├── data/                  # Dataset di input (.csv, .xlsx)
 ├── outputs/               # Report generati e grafici salvati
@@ -44,17 +43,15 @@ EDA_assistant/
 4. **Esegui l'analisi - run:** python3 main.py data/sample.csv
    ** Sostituire `data/sample.csv` con qualsiasi file di dataset a tua disposizione
 
-## Flusso di Esecuzione (Workflow)
+## Esecuzione 
 Quando avviato, il sistema compie 5 passi:
-1. **Data Load:** Carica il dataset gestendo tipi e codifiche.
-2. **Column Analysis:** Categorizza automaticamente le colonne (numeriche, testo, id, lookup).
-3. **Statistical Profiling:** Estrae i metadati (valori mancanti, cardinalità, test di normalità).
+1. **Data load:** Carica il dataset gestendo tipi e codifiche.
+2. **Column analysis:** Categorizza automaticamente le colonne (numeriche, testo, id, lookup).
+3. **Statistical profiling:** Estrae i metadati (valori mancanti, cardinalità, test di normalità).
 4. **Visualization:** Salva un set base di grafici esplorativi.
-5. **LLM Agents:** (Il cuore del progetto)
+5. **LLM Agents:** 
    - *Explainer*: Genera insight e scrive le conclusioni in base alle statistiche.
    - *Critic*: Verifica la coerenza tra testo generato e dati reali, identificando errori logici o numerici e garantendo che le conclusioni non violino le statistiche calcolate allo step 3.
-
-## Design Choices: Python vs LLM & Hardware Trade-offs
 
 # Separazione logica: Python vs LLM
 - Statistica → Python (deterministico, veloce, affidabile)
