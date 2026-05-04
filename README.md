@@ -44,7 +44,7 @@ EDA_assistant/
    ** Sostituire `data/sample.csv` con qualsiasi file di dataset a tua disposizione
 
 ## Esecuzione 
-Quando avviato, il sistema compie 5 passi:
+Quando avviato, il sistema:
 1. **Data load:** Carica il dataset gestendo tipi e codifiche.
 2. **Column analysis:** Categorizza automaticamente le colonne (numeriche, testo, id, lookup).
 3. **Statistical profiling:** Estrae i metadati (valori mancanti, cardinalità, test di normalità).
@@ -57,7 +57,7 @@ Quando avviato, il sistema compie 5 passi:
 - Statistica → Python (deterministico, veloce, affidabile)
 - Linguaggio e interpretazione → LLM
 * Gli LLM non sono affidabili per calcoli numerici precisi → si evita delega critica al modello
-# Critic Agent (Reflection Pattern)
+# Critic Agent
 - per ridurre hallucinations e migliorare affidabilità output
 - Trade-off: tra maggiore latenza (due chiamate LLM) e migliore qualità finale
 # Modello utilizzato
